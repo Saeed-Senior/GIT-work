@@ -2,6 +2,7 @@
 
 body{
    font-family: 'Heebo', 'sans-serif';
+   color: #21243D;
    &._lock{
       overflow: hidden;
    }
@@ -12,20 +13,26 @@ body{
    display: flex;
    flex-direction: column;
 }
+.container {
+   max-width: 880px;
+   padding: 0 12px;
+   margin: 0 auto;
+}
 .header {
 
 		// .header__inner
 
 		&__inner {
-         max-width: 1160px;
-         margin: 0 auto;
          padding: 0 60px;
          position: fixed;
+         top: 0;
+         right: 0;
          width: 100%;
          height: 80px;
          display: flex;
          align-items: center;
          justify-content: flex-end;
+         background-color: rgba(255, 255, 255, 0.9);
          @media(max-width:1160px){
             height: calc(50px + (80 - 50) * ((100vw - 380px) / (1160 - 380)));
             padding-right: calc(20px + (60 - 20) * ((100vw - 380px) / (1160 - 380)));
@@ -173,12 +180,279 @@ body{
 		}
 }
 
+//==============================================================================================================
+
+.greetings {
+
+   // .greetings__inner
+
+   &__inner {
+      display: flex;
+      justify-content: space-between;
+      margin-top: 210px;
+      @media(max-width: 768px){
+         flex-direction: column-reverse;
+         align-items: center;
+      }
+      @media(max-width:1160px){
+         margin-top: calc(83px + (210 - 83) * ((100vw - 380px) / (1160 - 380)));
+         }
+   }
+
+   // .greetings__text
+
+   &__text {
+      max-width: 495px;
+      @media(max-width: 768px){
+         text-align: center;
+         padding: 18px;
+      }
+   }
+
+   // .greetings__title
+
+   &__title {
+      font-weight: 700;
+font-size: 44px;
+line-height: 136%;
+@media(max-width:1160px){
+   font-size: calc(32px + (44 - 32) * ((100vw - 380px) / (1160 - 380)));
+   }
+   }
+
+   // .greetings__txt
+
+   &__txt {
+      line-height: 150%;
+      margin: 35px 0 40px;
+      @media(max-width: 768px){
+         margin: 15px 0 20px;
+      }
+   }
+
+   // .greetings__btn
+
+   &__btn {
+      font-weight: 500;
+font-size: 20px;
+color: white;
+background-color: #FF6464;
+height: 47px;
+width: 208px;
+border-radius: 3px;
+   }
+
+   // .greetings__image
+
+   &__image {
+      max-width: 243px;
+      img{
+         width: 100%;
+         border-radius: 50%;
+         box-shadow: -5px 13px 0 #EDF7FA;
+      }
+      @media(max-width: 768px){
+         margin-bottom: 34px;
+      }
+   }
+}
+
+//==============================================================================================================
+
+.columns {
+margin-top: 71px;
+background-color: #EDF7FA;
+padding: 32px 0;
+   // .columns__inner
+
+   &__inner {
+   }
+
+   // .columns__cookies
+
+   &__cookies {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 32px;
+      font-size: 22px;
+      span{
+         color: #00A8CC;
+         font-size: 16px;
+         @media(max-width: 768px){
+            display: none;
+         }
+      }
+      @media(max-width: 768px){
+         justify-content: center;
+      }
+   }
+
+   // .columns__column
+
+   &__column {
+      max-width: 418px;
+      background-color: #fff;
+      padding: 24px;
+      border-radius: 5px;
+      margin-right: 20px;
+      &:last-child{
+         margin-right: 0;
+      }
+      @media(max-width: 768px){
+         margin: 0 0 20px;
+      }
+   }
+}
+.column {
+
+   // .column__title
+
+   &__title {
+      font-weight: 700;
+font-size: 26px;
+line-height: 136%;
+@media(max-width: 380px){
+font-size: 22px;
+}
+   }
+
+   // .column__data
+
+   &__data {
+      font-size: 18px;
+      margin: 20px 0;
+      span{
+         margin: 0 25px;
+      }
+      @media(max-width: 380px){
+         font-size: 16px;
+      }
+   }
+
+   // .column__text
+
+   &__text {
+      line-height: 150%;
+   }
+}
+.columns__row{
+   display: flex;
+      justify-content: space-between;
+      @media(max-width: 768px){
+         flex-direction: column;
+         align-items: center;
+      }
+}
+
+//===============================================================================================================
+
+.portfolio {
+
+		// .portfolio__inner
+
+		&__inner {
+         padding: 40px 0 45px;
+		}
+
+		// .portfolio__title
+
+		&__title {
+         font-size: 22px;
+         @media(max-width: 768px){
+            text-align: center;
+         }
+		}
+
+		// .portfolio__cards
+
+		&__cards {
+         @media(max-width: 768px){
+            display: flex;
+            overflow: auto;
+         }
+		}
+
+		// .portfolio__card
+
+		&__card {
+         display: flex;
+         padding: 35px 0;
+         border-bottom: 1px solid #E0E0E0;
+         @media(max-width: 768px){
+            flex-direction: column;
+            margin-right: 50px;
+            padding-bottom: 15px;
+            &:last-child{
+               margin-right: 0;
+            }
+         }
+		}
+
+		// .portfolio__image
+
+		&__image {
+         img{
+            width: 246px;
+            margin-right: 18px;
+            @media(max-width: 768px){
+               width: 340px;
+            }
+         }
+		}
+
+		// .portfolio__text
+
+		&__text {
+         display: flex;
+         flex-direction: column;
+         justify-content: space-between;
+         @media(max-width: 768px){
+            height: 190px;
+            margin-top: 15px;
+         }
+		}
+
+		// .portfolio__ttl
+
+		&__ttl {
+         font-weight: 700;
+font-size: 30px;
+@media(max-width: 768px){
+font-size: 24px;
+}
+		}
+
+		// .portfolio__data
+
+		&__data {
+         color: #8695A4;
+         font-size: 20px;
+         span{
+            display: inline-block;
+            margin-right: 35px;
+            color: white;
+            font-size: 18px;
+            font-weight: 900;
+            padding: 3px 10px;
+            border-radius: 20px;
+            background-color: #142850;
+         }
+		}
+
+		// .portfolio__txt
+
+		&__txt {
+         line-height: 150%;
+		}
+}
+
 
 @media(max-width: 380px){
-
+}
+@media(max-width: 768px){
 }
 /*
 @media(max-width:1160px){
-   #: calc(<px + (> - <) * ((100vw - 375px) / (1160 - 375)));
+   #: calc(<px + (> - <) * ((100vw - 380px) / (1160 - 380)));
    }
 */
